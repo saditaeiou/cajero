@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="clase_5_css.css">
+</head>
+<body>
+
+  <nav>
+    <h1 class="banco">BancoCat</h1>
+  </nav>
+
+    <form id="formulario">
+        <div>
+            <h1>Inicio de sesión</h1>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" placeholder="Ingrese su nombre">Nombre</label>
+            <input type="text" class="form-control" id="user" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label" placeholder="Ingrese su contraseña">Contraseña</label>
+            <input type="password" class="form-control" id="pass">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
+        </div>
+        <button type="button" class="btn btn-primary" id="btn">Iniciar sesión</button>
+    </form>
+        
+    <section id="inicio" hidden="true">
+
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="./imagenes/gato.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 style="color: white;">Caridad</h2>
+              <p style="color: white;">Desde 2020 empezamos a donar a un centro de ayuda a gatos de la calle, cualquier donacion es bien recibida.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./imagenes/gato-dinero.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 style="color: white;">Seguridad</h2>
+              <p style="color: white;">La seguridad de tu cuenta en BancoCat esta garantizada, tenemos verificaciones y todos los documentos al dia.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./imagenes/jefe2.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 style="color: white;">Gato</h2>
+              <p style="color: white;">Desde 2020 el dueño es un gato que estudio finanzas, tiene al rededor de 10 titulos por lo cual es el mejor para la organización.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+        <div id="opciones">
+          <div class="card" style="width: 18rem;">
+            <img src="./imagenes/consultar.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Consultar saldo</h5>
+              <p class="card-text">Observa cuanto es el capital que tienes actualmente.</p>
+              <button class="btn-consultar btn-primary" id="consulta-btn">Consultar</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./imagenes/ingresar.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Ingresar monto</h5>
+              <p class="card-text">Deposita el monto que desees a tu cuenta.     *ESTE NO PUEDE PASAR DE 990</p>
+              <button class="btn btn-primary" id="ingreso-btn">Ingresar</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./imagenes/retirar.avif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Retirar Monto</h5>
+              <p class="card-text">Puedes retirar el monto que desees, se mostrara cuanto es tu capital final</p>
+              <button href="#" class="btn btn-primary" id="retiro-btn">Retirar</button>
+            </div>
+          </div>
+      </div>
+
+      <section id="consultar" hidden={true} >
+      
+        <div>
+          <h1>Cuenta de </h1>
+        </div>
+        <div class="saldo-cuenta">
+          <p>El saldo de su cuenta es de:</p>
+          <p id="capital"></p>
+        </div>
+      </section>
+       
+    </section>      
+
+   
+       
+
+    <script src="clase_5_js.js"></script>      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
