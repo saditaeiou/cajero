@@ -44,4 +44,48 @@ font-size: 60px;
 #consultar{
     background-color: rgb(183, 208, 255);
     text-align: center;
+    padding: 20px;
+}
+
+#ingreso{
+    background-color: rgb(183, 208, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+#retiro{
+    background-color: rgb(183, 208, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+#input-number{
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 10px;
+}
+
+#button-addon2 {
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#button-addon3 {
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#input-number2{
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 10px;
+}
+
+.input-group{
+    display:flex;
+    justify-content: center;
 }

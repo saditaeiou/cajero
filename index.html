@@ -79,14 +79,14 @@
             <div class="card-body">
               <h5 class="card-title">Consultar saldo</h5>
               <p class="card-text">Observa cuanto es el capital que tienes actualmente.</p>
-              <button class="btn-consultar btn-primary" id="consulta-btn">Consultar</button>
+              <button class="btn btn-primary" id="consulta-btn">Consultar</button>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
             <img src="./imagenes/ingresar.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Ingresar monto</h5>
-              <p class="card-text">Deposita el monto que desees a tu cuenta.     *ESTE NO PUEDE PASAR DE 990</p>
+              <p class="card-text">Deposita el monto que desees a tu cuenta y guardalo para usarlo más tarde.</p>
               <button class="btn btn-primary" id="ingreso-btn">Ingresar</button>
             </div>
           </div>
@@ -101,14 +101,37 @@
       </div>
 
       <section id="consultar" hidden={true} >
-      
         <div>
-          <h1>Cuenta de </h1>
+          <h1 id="nombre-cuenta"></h1>
         </div>
         <div class="saldo-cuenta">
-          <p>El saldo de su cuenta es de:</p>
-          <p id="capital"></p>
+          <p style="font-size: 20px;">El saldo de su cuenta es de:</p>
+          <h5 id="capital"></h5>
         </div>
+      </section>
+
+      <section id="ingreso" hidden={true}>
+        <h5></h5>
+        <div class="input-group mb-3">
+          <input id="input-number" type="number" placeholder="Ingrese el monto deseado" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Ingresar</button>
+        </div>
+          <p style="color: rgb(41, 114, 224);">¡Recuerde! No se puede tener más de 990 en su cuenta</p>
+          <p id="capital-ingresado"></p>
+          <p id="capital-nuevo"></p>
+
+      </section>
+
+      <section id="retiro" hidden={true}>
+        <h5></h5>
+        <div class="input-group mb-3">
+          <input id="input-number2" type="number" placeholder="Retire el monto deseado" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon3">Retirar</button>
+        </div>
+          <p style="color: rgb(41, 114, 224);">¡Recuerde! No se puede tener menos de 10 en su cuenta</p>
+          <p id="capital-retirado"></p>
+          <p id="dinero-nuevo"></p>
+
       </section>
        
     </section>      
